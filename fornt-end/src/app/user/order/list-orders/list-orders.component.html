@@ -1,0 +1,101 @@
+<app-side-bar></app-side-bar>
+<app-nav-bar></app-nav-bar>
+<div class="content-wrapper">
+    <!-- Content Header (Page header) -->
+    <section class="content-header">
+        <div class="container-fluid">
+            <div class="row mb-2">
+                <div class="col-sm-6">
+                    <h1>Orders</h1>
+                </div>
+                <div class="col-sm-6">
+                    <ol class="breadcrumb float-sm-right">
+                        <li class="breadcrumb-item"><a routerLink="/admin">Home</a></li>
+                        <li class="breadcrumb-item active">Orders</li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+        <!-- /.container-fluid -->
+    </section>
+
+    <!-- Main content -->
+    <section class="content">
+
+        <!-- Default box -->
+        <div class="card">
+            <div class="card-header">
+                <h3 class="card-title">Orders</h3>
+  
+
+                <div class="card-tools">
+                    <button type="button" class="btn btn-tool" data-card-widget="collapse" data-toggle="tooltip"
+                        title="Collapse">
+                        <i class="fas fa-minus"></i></button>
+                    <button type="button" class="btn btn-tool" data-card-widget="remove" data-toggle="tooltip"
+                        title="Remove">
+                        <i class="fas fa-times"></i></button>
+                </div>
+            </div>
+            <div class="card-body p-0">
+                <table class="table table-striped projects row-border hover " datatable [dtOptions]="dtOptions"
+                    [dtTrigger]="dtTrigger">
+                    <thead>
+                        <tr>
+                            <th style="width: 1%">
+                                #
+                            </th>
+                            <th style="width: 30%">
+                                Order Id
+                            </th>
+                            <th style="width: 20%">
+                                Customer Name
+                            </th>
+                            <th style="width: 20%">
+                                Customer address
+                            </th>
+                            <th style="width: 30%">
+                                Order total amount
+                            </th>
+                            
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr *ngFor="let order of listOrders , index as i ">
+                            <td>
+                                {{i+1}}
+                            </td>
+                            <td>
+                                <a>
+                                    {{order._id}}
+                                </a>
+                                <br />
+                                <small>
+                                    Created {{order.date | date : "short"}}
+                                </small>
+                            </td>
+                            <td>
+                                <a>
+                                    {{order.userId.name}}
+                                </a>
+                            </td>
+                            <td>
+                                {{order.address}}
+                            </td>
+                            <td>
+                                {{order.totalAmount}}
+                            </td>
+                           
+                        </tr>
+
+
+                    </tbody>
+                </table>
+            </div>
+            <!-- /.card-body -->
+        </div>
+        <!-- /.card -->
+
+    </section>
+    <!-- /.content -->
+</div>

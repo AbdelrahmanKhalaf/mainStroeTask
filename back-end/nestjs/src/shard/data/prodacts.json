@@ -1,0 +1,48 @@
+{
+    "stores": [
+        {
+            "name": "awlad rajab",
+            "items": [
+                {
+                    "name": "tsla",
+                    "unit": "liter",
+                    "quantity": 5,
+                    "price": 20,
+                    "totalPrice": 100,
+                    "currency":"USD"
+                },
+                {
+                    "name": "meat",
+                    "unit": "kilo",
+                    "quantity": 4,
+                    "price": 60,
+                    "totalPrice": 240,
+                    "currency":"USD"
+
+                }
+            ]
+        },
+        {
+            "name": "computer store",
+            "items": [
+                {
+                    "name": "keyboard",
+                    "unit": "count",
+                    "quantity": 5,
+                    "price": 100,
+                    "totalPrice": 500,
+                    "currency":"USD"
+                },
+                {
+                    "name": "mouse",
+                    "unit": "count",
+                    "quantity": 3,
+                    "price": 60,
+                    "totalPrice": 180,
+                    "currency":"USD"
+
+                }
+            ]
+        }
+    ]
+}
